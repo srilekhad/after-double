@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent A Dream Home</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; } /* Improved contrast */
+  header, footer { background-color: #025959; color: #ffffff; padding: 10px; text-align: center; } /* Darker background for better contrast */
+  section { margin: 20px; }
+  .container { display: flex; flex-direction: column; align-items: center; }
+  .form-group { margin-bottom: 10px; }
+  label { margin-right: 10px; }
+</style>
+</head>
+<body>
+<header>
+<h1>Rent A Dream Home</h1>
+</header>
+<section>
+<div class="container">
+  <!-- Form Example -->
+  <form id="rentalForm">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <select id="location" name="location">
+        <option value="city1">City 1</option>
+        <option value="city2">City 2</option>
+        <!-- Add more options here -->
+      </select>
+    </div>
+    <!-- Grouping radio buttons with fieldset and legend for better accessibility -->
+    <fieldset class="form-group">
+      <legend>Purpose</legend> <!-- Descriptive legend for the group -->
+      <input type="radio" id="buy" name="purpose" value="buy">
+      <label for="buy">Buy</label>
+      <input type="radio" id="rent" name="purpose" value="rent" checked>
+      <label for="rent">Rent</label>
+    </fieldset>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</section>
+<footer style="color:#ffffff; background-color:#025959;"> <!-- Improved contrast -->
+<p>Address: 123 Dream Lane, Apartment World</p>
+<p>Email: contact@rentahome.com</p>
+<p>Phone: (123) 456-7890</p>
+<a href="terms.html" style="color: #81d4fa;">Terms and Conditions</a> <!-- Color for better visibility -->
+</footer>
+<script>
+  document.getElementById('rentalForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted');
+    // Add more form validation and submission logic here
+  });
+</script>
+</body>
+</html>
